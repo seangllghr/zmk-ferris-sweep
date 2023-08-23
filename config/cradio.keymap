@@ -81,12 +81,12 @@
             &kp EXCL   &kp AT     &kp LBRC   &kp RBRC   &kp PIPE       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ #        │  $       │  (       │  )       │ `        │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            HRML(HASH,   DLLR,       LPAR,      RPAR)   &kp GRAVE      &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            HRML(HASH,   DLLR,       LPAR,      RPAR)   &kp GRAVE      &kp LARW   HRMR(DOWN,  UP,       RIGHT,     SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  ^       │  [       │  ]       │  ~       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -98,12 +98,12 @@
             &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │TODO: EMD │  4       │  5       │  6       │ + -      │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
+           HRML(EXCL,   AT,        HASH,      DLLR)     &kp PRCNT   &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  1       │  2       │  3       │ 0 =      │
             &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
