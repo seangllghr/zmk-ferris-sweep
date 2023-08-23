@@ -48,22 +48,22 @@
             key-positions = <32 33>;
             bindings = <&kp ENTER>;
         };
-        combo_qu {
-            timeout-ms = <200>;
-            key-positions = <20 21>;
-            bindings = <&ZM_QU>;
-        };
+        // combo_qu {
+        //     timeout-ms = <200>;
+        //     key-positions = <20 21>;
+        //     bindings = <&ZM_QU>;
+        // };
     };
 
-    macros {
-        macro_qu: macro_qu {
-            label = "ZM_QU";
-            compatible = "zmk,behavior-macro";
-            bindings
-                = <&macro_tap &kp Q &kp U>
-                ;
-        }
-    };
+    // macros {
+    //     macro_qu: macro_qu {
+    //         label = "ZM_QU";
+    //         compatible = "zmk,behavior-macro";
+    //         bindings
+    //             = <&macro_tap &kp Q &kp U>
+    //             ;
+    //     }
+    // };
 
     keymap {
         compatible = "zmk,keymap";
