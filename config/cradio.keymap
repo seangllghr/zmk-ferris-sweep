@@ -38,6 +38,16 @@
             key-positions = <31 32>;
             bindings = <&caps_word>;
         };
+        combo_esc {
+            timeout-ms = <200>;
+            key-positions = <30 31>;
+            bindings = <&kp ESC>;
+        };
+        combo_enter {
+            timeout-ms = <200>;
+            key-positions = <32 33>;
+            bindings = <&kp ENTER>;
+        };
         combo_qu {
             timeout-ms = <200>;
             key-positions = <20 21>;
@@ -57,7 +67,7 @@
             HRML(R,        S,         T,         H)     &kp P          &kp Y      HRMR(I,        E,         O,        A)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
-            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &kp FSLH
+            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &ht BSLH FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &ht LSHFT N   &ht LSHFT SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -67,13 +77,13 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│ !        │  @       │  {       │  }       │ |        │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp EXCL   &kp AT     &kp LBRC   &kp RBRC   &kp PIPE       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│ #        │  $       │  (       │  )       │ `        │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
+            HRML(HASH,   DLLR,       LPAR,      RPAR)   &kp GRAVE      &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+        //│ %        │  ^       │  [       │  ]       │  ~       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
@@ -84,14 +94,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │  [       │  {       │  }       │          │   │  \       │  7       │  8       │  9       │ * /      │
+            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│  !       │  @       │  #       │  $       │  %       │   │TODO: EMD │  4       │  5       │  6       │ + -      │
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │          │          │   │  &       │  1       │  2       │  3       │ 0 =      │
+            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &kp ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
