@@ -38,6 +38,11 @@
             key-positions = <31 32>;
             bindings = <&caps_word>;
         };
+        combo_qu {
+            timeout-ms = <200>;
+            key-positions = <20 21>;
+            bindings = <&kp Q &kp U>;
+        };
     };
 
     keymap {
@@ -52,7 +57,7 @@
             HRML(R,        S,         T,         H)     &kp P          &kp Y      HRMR(I,        E,         O,        A)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
-            &kp X      &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &kp FSLH
+            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &ht LSHFT N   &ht LSHFT SPACE  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
