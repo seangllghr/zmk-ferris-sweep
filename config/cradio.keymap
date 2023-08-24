@@ -48,6 +48,11 @@
             key-positions = <32 33>;
             bindings = <&kp ENTER>;
         };
+        combo_bspc {
+            timeout-ms = <200>;
+            key-positions = <6 7>;
+            bindings = <&kp BSPC>;
+        }
         // combo_qu {
         //     timeout-ms = <200>;
         //     key-positions = <20 21>;
@@ -79,7 +84,7 @@
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
             &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &ht BSLH FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &ht LSHFT N   &ht LSHFT SPACE  &lt 1 BSPC
+                                            &lt 2 TAB   &ht LSHFT N   &ht LSHFT SPACE  &mo 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
