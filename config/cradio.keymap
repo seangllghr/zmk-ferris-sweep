@@ -45,7 +45,7 @@
         };
         combo_bspc {
             timeout-ms = <200>;
-            key-positions = <25 26>;
+            key-positions = <26 27>;
             bindings = <&kp BSPC>;
         };
         // combo_qu {
@@ -113,7 +113,7 @@
         //│          │          │          │          │          │   │  &       │  1       │  2       │  3       │ 0 =      │
             &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &kp ENTER  &trans
+                                             &trans     &trans         &ht LSHFT ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
