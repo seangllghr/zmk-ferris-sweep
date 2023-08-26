@@ -104,14 +104,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  \       │  7       │  8       │  9       │ * /      │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
+        //│          │  F7      │  F8      │  F9      │  F12     │   │  \       │  7       │  8       │  9       │ * /      │
+            &trans     &kp F7     &kp F8     &kp F9     &kp F12         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │TODO: EMD │  4       │  5       │  6       │ + -      │
-           HRML(EXCL,   AT,        HASH,      DLLR)     &kp PRCNT   &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
+        //│  !       │  F4      │  F5      │  F6      │  F11     │   │TODO: EMD │  4       │  5       │  6       │ + -      │
+           HRML(EXCL,      F4,        F5,        F6)    &kp F11    &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  1       │  2       │  3       │ 0 =      │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
+        //│          │  F1      │  F2      │  F3      │  F10     │   │  &       │  1       │  2       │  3       │ 0 =      │
+            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &ht LSHFT ENTER  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -125,7 +125,7 @@
            &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &bt BT_SEL 3  &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
