@@ -142,7 +142,7 @@
             &kp ENTER  &kp Q      &kp W      &kp E      &kp R          &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp TAB    &KP A      &kp S      &kp D      &kp F          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
+            &kp TAB    &kp A      &kp S      &kp D      &kp F          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp ESCAPE  &kp Z     &kp X      &kp C      &kp V         &trans     &tog 4      &trans     &trans     &trans
