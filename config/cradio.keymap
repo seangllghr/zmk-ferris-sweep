@@ -63,7 +63,7 @@
             bindings
                 = <&macro_tap &kp Q &kp U>
                 ;
-        }
+        };
     };
 
     keymap {
