@@ -1,3 +1,4 @@
+// -*- mode: dts -*-
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
@@ -59,7 +60,7 @@
         macro_qu: macro_qu {
             label = "ZM_QU";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp Q &kp U>
                 ;
