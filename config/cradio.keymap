@@ -65,6 +65,14 @@
                 = <&macro_tap &kp Q &kp U>
                 ;
         };
+        macro_mad: macro_mad {
+            label = "ZM_MAD";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LGUI &kp LALT &kp DEL>
+                ;
+        };
     };
 
     keymap {
@@ -123,14 +131,14 @@
         tri_layer {  // Control layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│                     │          │          │ RESET    │   │ RESET    │          │          │          │          │
-           &trans      &trans     &trans     &trans    &sys_reset     &sys_reset  &trans     &trans     &trans    &trans
+        //│  RESET   │          │          │          │          │   │ MEDIA   │TODO:PLAYR│ MEDIA   │ MEDIA   │ RESET    │
+           &sys_reset  &trans    &trans     &trans     &trans         &kp K_PREV  &trans    &kp K_PP  &kp K_NEXT  &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │BOOTLOADER│   │BOOTLOADER│          │          │          │          │
-          &trans       &trans     &trans     &trans    &bootloader   &bootloader  &trans     &trans     &trans    &trans
+        //│BOOTLOADER│          │          │          │          │   │TODO:MIXER│ VOL DOWN │ VOL UP   │ MUTE     │BOOTLOADER│
+          &bootloader  &trans    &trans     &trans     &trans      &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE  &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│PROFILE 0 │PROFILE 1 │PROFILE 2 │PROFILE 3 │CLEAR bt  │   │          │          │          │          │          │
-      &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans  &tog 4     &trans     &trans     &trans
+        //│PROFILE 0 │PROFILE 1 │PROFILE 2 │PROFILE 3 │CLEAR bt  │   │GAMING LYR│PROC MNGR │          │          │          │
+      &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &tog 4  &macro_mad  &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
