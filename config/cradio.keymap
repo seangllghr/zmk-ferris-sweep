@@ -69,7 +69,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        default_layer {  // Base layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  V       │  G       │  M       │  F       │ ; :      │   │ ' "      │  K       │  U       │  J       │  Z       │
@@ -86,7 +86,7 @@
             >;
         };
 
-        right_layer {
+        right_layer {  // Symbolic/navigation layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ !        │  @       │  {       │  }       │ |        │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
@@ -103,7 +103,7 @@
             >;
         };
 
-        left_layer {
+        left_layer {  // Numerics and function keys layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  F7      │  F8      │  F9      │  F12     │   │  \       │  7       │  8       │  9       │ * /      │
@@ -120,24 +120,24 @@
             >;
         };
 
-        tri_layer {
+        tri_layer {  // Control layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│                     │          │          │ RESET    │   │ RESET    │          │          │          │          │
+           &trans      &trans     &trans     &trans    &sys_reset     &sys_reset  &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &bt BT_SEL 3  &trans     &trans     &trans    &bootloader
+        //│          │          │          │          │BOOTLOADER│   │BOOTLOADER│          │          │          │          │
+          &trans       &trans     &trans     &trans    &bootloader   &bootloader  &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &tog 4    &trans     &trans     &trans
+        //│PROFILE 0 │PROFILE 1 │PROFILE 2 │PROFILE 3 │CLEAR bt  │   │          │          │          │          │          │
+      &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &trans  &tog 4     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        gaming {
+        gaming {  // Single handed gaming layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
@@ -154,7 +154,7 @@
             >;
         };
 
-        weapon_action {
+        weapon_action {  // In-game weapons/actions layer
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
