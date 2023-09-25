@@ -65,14 +65,6 @@
                 = <&macro_tap &kp Q &kp U>
                 ;
         };
-        macro_mad: macro_mad {
-            label = "ZM_MAD";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LGUI &kp LALT &kp DEL>
-                ;
-        };
     };
 
     keymap {
@@ -134,11 +126,11 @@
         //│  RESET   │          │          │          │          │   │ MEDIA   │TODO:PLAYR│ MEDIA   │ MEDIA   │ RESET    │
            &sys_reset  &trans    &trans     &trans     &trans         &kp K_PREV  &trans    &kp K_PP  &kp K_NEXT  &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │          │   │TODO:MIXER│ VOL DOWN │ VOL UP   │ MUTE     │BOOTLOADER│
-          &bootloader  &trans    &trans     &trans     &trans      &trans  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE  &bootloader
+        //│BOOTLOADER│          │          │          │          │   │  MIXER   │ VOL DOWN │ VOL UP   │ MUTE     │BOOTLOADER│
+          &bootloader  &trans    &trans     &trans     &trans      &kp LG(LA(F4))  &kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE  &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│PROFILE 0 │PROFILE 1 │PROFILE 2 │PROFILE 3 │CLEAR bt  │   │GAMING LYR│PROC MNGR │          │          │          │
-      &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &tog 4  &macro_mad  &trans     &trans     &trans
+      &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  &tog 4  &kp LG(LA(DEL))  &trans  &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
