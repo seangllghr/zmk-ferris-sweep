@@ -50,10 +50,22 @@
             bindings = <&kp BSPC>;
             layers = <0>;
         };
+        combo_bspc_word {
+            timeout-ms = <100>;
+            key-positions = <25 26>;
+            bindings = <&kp LC(BSPC)>;
+            layers = <0>;
+        };
         combo_del {
             timeout-ms = <100>;
             key-positions = <27 28>;
             bindings = <&kp DEL>;
+            layers = <0>;
+        };
+        combo_del_word {
+            timeout-ms = <100>;
+            key-positions = <28 29>;
+            bindings = <&kp LC(DEL)>;
             layers = <0>;
         };
         combo_del_all {
