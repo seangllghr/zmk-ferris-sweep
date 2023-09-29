@@ -56,6 +56,12 @@
             bindings = <&kp DEL>;
             layers = <0>;
         };
+        combo_del_all {
+            timeout-ms = <100>;
+            key-positions = <26 27 28>;
+            bindings = <&macro_del_all>;
+            layers = <0>;
+        };
         combo_qu {
             timeout-ms = <100>;
             key-positions = <20 21>;
@@ -71,6 +77,15 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp Q &kp U>
+                ;
+        };
+        macro_del_all: macro_del_all {
+            label = "ZM_DEL_ALL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(A)>
+                , <&macro_tap &kp DEL>
                 ;
         };
     };
