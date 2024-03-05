@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &kp k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &kp k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &ht LSHFT k4
 
 / {
     behaviors {
@@ -36,9 +36,19 @@
         compatible = "zmk,combos";
         combo_caps_word {
             timeout-ms = <100>;
-            key-positions = <31 32>;
+            key-positions = <10 19>;
             bindings = <&caps_word>;
         };
+        combo_spc {
+            timeout-ms = <100>;
+            key-positions = <16 17>;
+            bindings = <&kp SPACE>;
+        };
+        combo_enter {
+            timeout-ms = <100>;
+            key-positions = <16 17 18>;
+            bindings = <&kp ENTER>;
+        }
         combo_esc {
             timeout-ms = <100>;
             key-positions = <30 31>;
@@ -114,9 +124,9 @@
             HRML(R,        S,         T,         H)     &kp P          &kp Y      HRMR(I,        E,         O,        A)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
-            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &kp W      &kp COMMA  &kp DOT    &ht BSLH FSLH
+            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &lt 1 W  &lt 1 COMMA  &lt 1 DOT    &ht BSLH FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &ht LSHFT N   &ht LSHFT SPACE  &mo 1
+                                            &lt 2 TAB   &lt 1 N       &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
