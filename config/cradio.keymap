@@ -39,7 +39,12 @@
             key-positions = <10 19>;
             bindings = <&caps_word>;
         };
-        combo_spc {
+        combo_spc_l {
+            timeout-ms = <100>;
+            key-positions = <12 13>;
+            bindings = <&kp SPACE>;
+        };
+        combo_spc_r {
             timeout-ms = <100>;
             key-positions = <16 17>;
             bindings = <&kp SPACE>;
@@ -121,7 +126,7 @@
             &kp V      &kp G      &kp M      &kp F      &kp SEMI       &kp SQT    &kp K      &kp U      &kp J      &kp Z
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  R       │  S       │  T       │  H       │  P       │   │  Y       │  I       │  E       │  O       │  A       │
-          &mt LSHFT R  &mt LALT S  &mt LCTRL T  &mt LGUI H  &kp P     &kp Y  &mt RGUI I  &mt RCTRL E  &mt LALT O  &mt RSHFT A
+          &ht LSHFT R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &kp P     &kp Y  &ht RGUI I  &ht RCTRL E  &ht LALT O  &ht RSHFT A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
             &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &lt 1 W  &lt 1 COMMA  &lt 1 DOT    &ht BSLH FSLH
@@ -138,7 +143,7 @@
             &kp EXCL   &kp AT     &kp LBRC   &kp RBRC   &kp PIPE       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ #        │  $       │  (       │  )       │ `        │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-   &mt LSHFT HASH  &mt LALT DLLR  &mt LCTRL LPAR  &mt LGUI RPAR  &kp GRAVE  &kp LEFT  &mt RGUI DOWN  &mt RCTRL UP  &mt LALT RIGHT &mt RSHFT SEMI
+   &ht LSHFT HASH  &ht LALT DLLR  &ht LCTRL LPAR  &ht LGUI RPAR  &kp GRAVE  &kp LEFT  &ht RGUI DOWN  &ht RCTRL UP  &ht LALT RIGHT &ht RSHFT SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  ^       │  [       │  ]       │  ~       │   │          │          │          │          │          │
            &kp PRCNT  &kp CARET   &kp LBKT   &kp RBKT   &kp TILDE     &trans     &trans     &trans     &trans     &trans
