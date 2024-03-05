@@ -129,7 +129,7 @@
           &ht LSHFT R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &kp P     &kp Y  &ht RGUI I  &ht RCTRL E  &ht LALT O  &ht RSHFT A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
-            &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &lt 1 W  &lt 2 COMMA  &kp DOT    &ht BSLH FSLH
+            &ht Q X    &kp C      &lt 2 L      &lt 1 D      &kp B          &kp MINUS  &lt 1 W  &lt 2 COMMA  &kp DOT    &ht BSLH FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp TAB     &kp N       &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -146,7 +146,7 @@
    &ht LSHFT HASH  &ht LALT DLLR  &ht LCTRL LPAR  &ht LGUI RPAR  &kp GRAVE  &kp LEFT  &ht RGUI DOWN  &ht RCTRL UP  &ht LALT RIGHT &ht RSHFT SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  ^       │  [       │  ]       │  ~       │   │          │          │          │          │          │
-           &kp PRCNT  &kp CARET   &kp LBKT   &kp RBKT   &kp TILDE     &trans     &trans     &trans     &trans     &trans
+           &kp PRCNT  &kp CARET   &lt 2 LBKT   &lt 1 RBKT   &kp TILDE     &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -163,7 +163,7 @@
             &kp LSHFT  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &kp F11    &kp ASTRK  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F10     │   │  &       │  1       │  2       │  3       │ 0 =      │
-            &trans     &kp F1     &kp F2     &kp F3     &kp F10         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
+            &trans     &kp F1     &lt 2 F2   &lt 1 F3   &kp F10        &kp AMPS   &lt 1 N1   &lt 2 N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
