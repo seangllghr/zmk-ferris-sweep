@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &ht LSHFT k4
+/* #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4 */
+/* #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &ht LSHFT k4 */
 
 / {
     behaviors {
@@ -121,7 +121,7 @@
             &kp V      &kp G      &kp M      &kp F      &kp SEMI       &kp SQT    &kp K      &kp U      &kp J      &kp Z
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  R       │  S       │  T       │  H       │  P       │   │  Y       │  I       │  E       │  O       │  A       │
-            HRML(R,        S,         T,         H)     &kp P          &kp Y      HRMR(I,        E,         O,        A)
+          &mt LSHFT R  &mt LALT S  &mt LCTRL T  &mt LGUI H  &kp P     &kp Y  &mt RGUI I  &mt RCTRL E  &mt LALT O  &mt RSHFT A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
             &ht Q X    &kp C      &kp L      &kp D      &kp B          &kp MINUS  &lt 1 W  &lt 1 COMMA  &lt 1 DOT    &ht BSLH FSLH
@@ -138,7 +138,7 @@
             &kp EXCL   &kp AT     &kp LBRC   &kp RBRC   &kp PIPE       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ #        │  $       │  (       │  )       │ `        │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            HRML(HASH,   DLLR,       LPAR,      RPAR)   &kp GRAVE      &kp LARW   HRMR(DOWN,  UP,       RIGHT,     SEMI)
+   &mt LSHFT HASH  &mt LALT DLLR  &mt LCTRL LPAR  &mt LGUI RPAR  &kp GRAVE  &kp LEFT  &mt RGUI DOWN  &mt RCTRL UP  &mt LALT RIGHT &mt RSHFT SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ %        │  ^       │  [       │  ]       │  ~       │   │          │          │          │          │          │
            &kp PRCNT  &kp CARET   &kp LBKT   &kp RBKT   &kp TILDE     &trans     &trans     &trans     &trans     &trans
@@ -155,12 +155,12 @@
             &trans     &kp F7     &kp F8     &kp F9     &kp F12         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  F4      │  F5      │  F6      │  F11     │   │TODO: EMD │  4       │  5       │  6       │ + -      │
-           HRML(EXCL,      F4,        F5,        F6)    &kp F11    &kp ASTRK  &ht LGUI N4  &ht LCTRL N5  &ht LALT N6  &ht MINUS PLUS
+            &kp LSHFT  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &kp F11    &kp ASTRK  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F10     │   │  &       │  1       │  2       │  3       │ 0 =      │
             &trans     &kp F1     &kp F2     &kp F3     &kp F10         &kp AMPS   &kp N1    &kp N2     &kp N3     &ht EQUAL N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &ht LSHFT ENTER  &trans
+                                             &trans     &trans         &trans    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
