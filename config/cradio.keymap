@@ -48,7 +48,7 @@
             timeout-ms = <100>;
             key-positions = <16 17 18>;
             bindings = <&kp ENTER>;
-        }
+        };
         combo_esc {
             timeout-ms = <100>;
             key-positions = <30 31>;
