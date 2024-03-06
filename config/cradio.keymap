@@ -126,7 +126,7 @@
             &kp V      &kp G      &kp M      &kp F      &kp SEMI       &kp SQT    &kp K      &kp U      &kp J      &kp Z
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  R       │  S       │  T       │  H       │  P       │   │  Y       │  I       │  E       │  O       │  A       │
-          &ht LSHFT R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &kp P     &kp Y  &ht RGUI I  &ht RCTRL E  &ht LALT O  &ht RSHFT A
+          &kp R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &ht LSHFT P     &ht LSHFT Y  &ht RGUI I  &ht RCTRL E  &ht LALT O  &kp A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  C       │  L       │  D       │  B       │   │ - _      │  W       │ , <      │ . >      │ / ?      │
             &ht Q X    &kp C      &lt 1 L      &lt 2 D      &kp B          &kp MINUS  &lt 1 W  &lt 2 COMMA  &kp DOT    &ht BSLH FSLH
