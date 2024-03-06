@@ -160,7 +160,7 @@
             &trans     &kp F7     &kp F8     &kp F9     &kp F12         &kp BSLH  &kp N7     &kp N8     &kp N9     &ht FSLH ASTRK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  F4      │  F5      │  F6      │  F11     │   │TODO: EMD │  4       │  5       │  6       │ + -      │
-            &kp LSHFT  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &kp F11    &kp ASTRK  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
+            &trans  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &ht LSHFT F11    &ht LSHFT ASTRK  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  F1      │  F2      │  F3      │  F10     │   │  &       │  1       │  2       │  3       │ 0 =      │
             &trans     &kp F1     &lt 1 F2   &lt 2 F3   &kp F10        &kp AMPS   &lt 1 N1   &lt 2 N2     &kp N3     &ht EQUAL N0
