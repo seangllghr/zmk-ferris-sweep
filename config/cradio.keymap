@@ -40,12 +40,12 @@
             bindings = <&caps_word>;
         };
         combo_spc_l {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp SPACE>;
         };
         combo_spc_r {
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp SPACE>;
         };
