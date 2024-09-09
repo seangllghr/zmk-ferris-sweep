@@ -115,6 +115,17 @@
                 , <&macro_tap &kp DEL>
                 ;
         };
+        macro_emd: macro_emd {
+            label = "ZM_EMD";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RALT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp MINUS>
+                ;
+        };
     };
 
     keymap {
@@ -147,14 +158,14 @@
 
         left_layer {  // Numerics and function keys layer
             bindings = <
-        //|        |  F7        |  F8         |  F9        |  F12         |   |  \             |  7         |  8          |  9         | * /           |
-            &trans  &kp F7       &kp F8        &kp F9       &kp F12            &kp BSLH         &kp N7       &kp N8        &kp N9       &ht FSLH ASTRK
-        //|  !     |  F4        |  F5         |  F6        |  F11         |   |TODO: EMD       |  4         |  5          |  6         | + -           |
-            &trans  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &ht LSHFT F11      &ht LSHFT ASTRK  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
-        //|        |  F1        |  F2         |  F3        |  F10         |   |  &             |  1         |  2          |  3         | 0 =           |
-            &trans  &kp F1       &lt 1 F2      &lt 2 F3     &kp F10            &kp AMPS         &lt 1 N1     &lt 2 N2      &kp N3       &ht EQUAL N0
-        //                                    |            |              |   |                |            |
-                                               &trans       &trans             &trans           &trans
+        //|        |  F7        |  F8         |  F9        |  F12         |   |  \        |  7         |  8          |  9         | * /           |
+            &trans  &kp F7       &kp F8        &kp F9       &kp F12            &kp BSLH    &kp N7       &kp N8        &kp N9       &ht FSLH ASTRK
+        //|  !     |  F4        |  F5         |  F6        |  F11         |   | EMD       |  4         |  5          |  6         | + -           |
+            &trans  &ht LALT F4  &ht LCTRL F5  &ht LGUI F6  &ht LSHFT F11      &macro_emd  &ht RGUI N4  &ht RCTRL N5  &ht LALT N6  &ht MINUS PLUS
+        //|        |  F1        |  F2         |  F3        |  F10         |   |  &        |  1         |  2          |  3         | 0 =           |
+            &trans  &kp F1       &lt 1 F2      &lt 2 F3     &kp F10            &kp AMPS    &lt 1 N1     &lt 2 N2      &kp N3       &ht EQUAL N0
+        //                                    |            |              |   |           |            |
+                                               &trans       &trans             &trans      &trans
             >;
         };
 
