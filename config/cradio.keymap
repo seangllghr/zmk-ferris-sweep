@@ -1,4 +1,4 @@
-// -*- mode: dts -*-
+I // -*- mode: dts -*-
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
@@ -172,8 +172,8 @@
 
         tri_layer {  // Control layer
             bindings = <
-        //|  RESET      |             |             |             |             |   | MEDIA        |TODO:PLAYR      | MEDIA      | MEDIA     | RESET      |
-           &sys_reset    &trans        &trans        &trans        &trans            &kp K_PREV      &trans           &kp K_PP       &kp K_NEXT  &sys_reset
+        //|  RESET      |             |             |             | Soft off    |   | MEDIA        |TODO:PLAYR      | MEDIA      | MEDIA     | RESET      |
+           &sys_reset    &trans        &trans        &trans        &soft_off            &kp K_PREV      &trans           &kp K_PP       &kp K_NEXT  &sys_reset
         //| BOOTLOADER  |             |             |             |             |   |  MIXER        | VOL DOWN       | VOL UP      | MUTE       | BOOTLOADER |
            &bootloader   &trans        &trans        &trans        &trans            &kp LG(LA(F4))  &kp K_VOL_DN     &kp K_VOL_UP  &kp K_MUTE   &bootloader
         //| PROFILE 0   | PROFILE 1   | PROFILE 2   | PROFILE 3   | PROFILE 4   |   |GAMING LYR     |PROC MNGR       |             |            |            |
