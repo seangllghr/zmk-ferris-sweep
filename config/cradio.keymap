@@ -133,27 +133,27 @@
         compatible = "zmk,keymap";
         default_layer {  // Base layer
             bindings = <
-        //|  V       |  G        |  M         |  F        | ;:         |   | '"         |  K        |  U         |  J         |  Z           |
-            &kp V      &kp G      &kp M        &kp F       &kp SEMI         &kp SQT      &kp K       &kp U        &kp J        &kp Z
-        //|  R       |  S        |  T         |  H        | P          |   |  Y         |  I        |  E         |  O         |  A           |
-          &ht RALT R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &ht LSHFT P      &ht LSHFT Y  &ht RGUI I  &ht RCTRL E  &ht LALT O   &ht RALT A
-        //|  X       |  C        |  L         |  D        | B          |   | - _        |  W        | , <        | . >        | / ?          |
-            &ht Q X    &kp C      &lt 1 L      &lt 2 D     &kp B            &kp MINUS    &lt 1 W     &lt 2 COMMA  &kp DOT      &ht BSLH FSLH
-        //                                    |           |            |   |            |           |
-                                               &kp TAB     &kp N            &none        &none
+        //|  V       |  G        |  M         |  F        | ;:                |   | '"                |  K        |  U         |  J         |  Z           |
+            &kp V      &kp G      &kp M        &kp F       &ht LG(LSHFT) SEMI      &ht LG(LSHFT) SQT   &kp K       &kp U        &kp J        &kp Z
+        //|  R       |  S        |  T         |  H        | P                 |   |  Y                |  I        |  E         |  O         |  A           |
+          &ht RALT R  &ht LALT S  &ht LCTRL T  &ht LGUI H  &ht LSHFT P             &ht LSHFT Y         &ht RGUI I  &ht RCTRL E  &ht LALT O   &ht RALT A
+        //|  X       |  C        |  L         |  D        | B                 |   | - _               |  W        | , <        | . >        | / ?          |
+            &ht Q X    &kp C      &lt 1 L      &lt 2 D     &kp B                   &kp MINUS           &lt 1 W     &lt 2 COMMA  &kp DOT      &ht BSLH FSLH
+        //                                    |           |                   |   |                   |           |
+                                               &kp TAB     &kp N                   &none               &none
             >;
         };
 
         right_layer {  // Symbolic/navigation layer
             bindings = <
-        //| !             |  @           |  {            |  }           | PIPE     |   | HOME     | PAGE DN      | PAGE UP     | END           |  :           |
-           &kp EXCL        &kp AT         &kp LBRC        &kp RBRC       &kp PIPE       &kp HOME   &kp PG_DN      &kp PG_UP     &kp END         &kp COLON
-        //| #             |  $           |  (            |  )           | `        |   | LEFT     | DOWN         | UP          | RIGHT         |  ;           |
-           &ht LSHFT HASH  &ht LALT DLLR  &ht LCTRL LPAR  &ht LGUI RPAR  &kp GRAVE      &kp LEFT   &ht RGUI DOWN  &ht RCTRL UP  &ht LALT RIGHT  &ht RSHFT SEMI
-        //| %             |  ^           |  [            |  ]           |  ~       |   |          |              |             |               |              |
-           &kp PRCNT       &kp CARET      &lt 1 LBKT      &lt 2 RBKT     &kp TILDE      &trans     &trans         &trans        &trans          &trans
-        //                                               |              |          |   |          |              |
-                                                          &trans         &trans         &trans     &trans
+        //| !             |  @           |  {            |  }           | PIPE              |   | HOME               | PAGE DN      | PAGE UP     | END           |  :           |
+           &kp EXCL        &kp AT         &kp LBRC        &kp RBRC       &ht LG(LSHFT) PIPE      &ht LG(LSHFT) HOME   &kp PG_DN      &kp PG_UP     &kp END         &kp COLON
+        //| #             |  $           |  (            |  )           | `                 |   | LEFT               | DOWN         | UP          | RIGHT         |  ;           |
+           &ht LSHFT HASH  &ht LALT DLLR  &ht LCTRL LPAR  &ht LGUI RPAR  &kp GRAVE               &kp LEFT             &ht RGUI DOWN  &ht RCTRL UP  &ht LALT RIGHT  &ht RSHFT SEMI
+        //| %             |  ^           |  [            |  ]           |  ~                |   |                    |              |             |               |              |
+           &kp PRCNT       &kp CARET      &lt 1 LBKT      &lt 2 RBKT     &kp TILDE               &trans               &trans         &trans        &trans          &trans
+        //                                               |              |                   |   |                    |              |
+                                                          &trans         &trans                  &trans               &trans
             >;
         };
 
